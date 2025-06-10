@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>Star Rating</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+    <link rel="stylesheet" href="style.css">
+</head>
+
+
+<body>
+    <div class="yellow-main-background">
+        <div class="white-main-background">
+            <h1>Rate your experience</h1>
+            <h1 id="emoji">😡</h1>
+            <p id="feedback-text">Angry</p>
+
+            <!-- Star Container with ID added -->
+            <div id="starContainer">
+                <i class="star fa fa-star" id="star-1" data-rating="1"></i>
+                <i class="star fa fa-star" id="star-2" data-rating="2"></i>
+                <i class="star fa fa-star" id="star-3" data-rating="3"></i>
+                <i class="star fa fa-star" id="star-4" data-rating="4"></i>
+                <i class="star fa fa-star" id="star-5" data-rating="5"></i>
+            </div>
+
+            <!-- Feedback Section -->
+            <div id="feedback-section" class="text-center mt-4 d-none">
+                <textarea class="form-control w-75 mx-auto" placeholder="Tell us more about your experience..."></textarea>
+                <button class="btn btn-primary mt-2">Submit Feedback</button>
+            </div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,102 @@
+@import url('https://fonts.googleapis.com/css2?family=Bree+Serif&family=Caveat:wght@400;700&family=Lobster&family=Monoton&family=Open+Sans:ital,wght@0,400;0,700;1,400;1,700&family=Playfair+Display+SC:ital,wght@0,400;0,700;1,700&family=Playfair+Display:ital,wght@0,400;0,700;1,700&family=Roboto:ital,wght@0,400;0,700;1,400;1,700&family=Source+Sans+Pro:ital,wght@0,400;0,700;1,700&family=Work+Sans:ital,wght@0,400;0,700;1,700&display=swap');
+
+body {
+    font-family: 'Roboto', sans-serif;
+}
+
+.yellow-main-background {
+    background-color: #ffd700;
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.white-main-background {
+    background-color: white;
+    height: 60vh;
+    width: 60%;
+    border-radius: 15px;
+    padding: 20px;
+    text-align: center;
+}
+
+#emoji {
+    font-size: 5rem;
+    transition: all 0.3s ease;
+    cursor: default;
+}
+
+.stars-container {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.star {
+    font-size: 2.5rem;
+    color: #c5c5c5;
+    margin: 0 5px;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+.star:hover {
+    transform: scale(1.2);
+}
+
+.star.active {
+    color: #ffd700;
+}
+
+#feedback-text {
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: #333;
+    min-height: 24px;
+}
+
+.dark-mode {
+    background-color: #121212;
+    color: white;
+}
+
+.dark-mode .white-main-background {
+    background-color: #1e1e1e;
+    color: white;
+}
+
+.dark-mode #feedback-text {
+    color: white;
+}
+
+/* Tooltip styles */
+.star {
+    position: relative;
+}
+
+.star::after {
+    content: attr(data-tooltip);
+    position: absolute;
+    bottom: 100%;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: #333;
+    color: white;
+    padding: 5px 10px;
+    border-radius: 5px;
+    font-size: 0.8rem;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.3s;
+    white-space: nowrap;
+}
+
+.one {
+    color: black;
+}
+
+.star:hover::after {
+    opacity: 1;
+    visibility: visible;
+}
